@@ -1,5 +1,5 @@
-[**Home**](/) | [**Publications**](/publications/) | [**Gallery**](/gallery/)
-***
+[**Home**](/) | [**Publications**](/publications/)
+
 # Hi there! I'm a Bioinformatics Researcher
 
 ### 🧬 About Me
