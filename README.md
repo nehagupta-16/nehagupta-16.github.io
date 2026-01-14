@@ -1,3 +1,5 @@
+[**Home**](/) | [**Publications**](/publications/) | [**Gallery**](/gallery/)
+***
 # Hi there! I'm a Bioinformatics Researcher
 
 ### 🧬 About Me
