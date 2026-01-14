@@ -1,1 +1,42 @@
-theme: jekyll-theme-cayman
+title: Neha Gupta
+description: PhD Candidate | Bioinformatics
+url: "https://nehagupta-16.github.io"
+baseurl: ""
+
+# Minimal Mistakes as remote theme
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-include-cache
+
+# Pick a built-in color skin (modern academic look)
+# Options include: air, aqua, contrast, dark, dirt, mint, neon, plum, sunrise
+minimal_mistakes_skin: "mint"
+
+# Site author (shows in sidebar/author card)
+author:
+  name: "Neha Gupta"
+  #avatar: "/assets/images/Saurav_profile.JPG"  
+  bio: "PhD Candidate | Bioinformatics"
+  location: "Athens, GA"
+  #email: "saurav.choudhary@uga.edu"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/nehagupta-16"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/neha16/"
+    - label: "Google Scholar"
+      icon: "fas fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=u_bU1SEAAAAJ&hl=en"
+
+# Defaults so pages look consistent
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+
+# Cleaner URLs like /about/ instead of /about.html
+permalink: pretty
