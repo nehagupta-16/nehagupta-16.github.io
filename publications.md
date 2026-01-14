@@ -1,9 +1,3 @@
----
-layout: default
-title: Publications
-permalink: /publications/
----
-
 [**Home**](/) | [**Publications**](/publications/)
 
 ### Journal Articles
