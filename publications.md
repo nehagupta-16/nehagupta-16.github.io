@@ -1,3 +1,8 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
 # Publications
 
 [Home](/) | [Publications](/publications) | [Gallery](/gallery)
