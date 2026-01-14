@@ -4,9 +4,7 @@ title: Publications
 permalink: /publications/
 ---
 
-[**Home**](/) | [**Publications**](/publications/) | [**Gallery**](/gallery/)
-***
----
+[**Home**](/) | [**Publications**](/publications/)
 
 ### Journal Articles
 * **Author Name**, Co-Author Name. "Title of the Research Paper on Neurodegenerative Diseases." *Journal Name*, Year. [PDF Link/DOI]
