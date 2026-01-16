@@ -10,7 +10,7 @@ plugins:
 
 # Pick a built-in color skin (modern academic look)
 # Options include: air, aqua, contrast, dark, dirt, mint, neon, plum, sunrise
-minimal_mistakes_skin: "mint"
+minimal_mistakes_skin: "sunrise"
 
 # Site author (shows in sidebar/author card)
 author:
