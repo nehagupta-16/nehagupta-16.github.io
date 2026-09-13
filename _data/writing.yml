@@ -1,0 +1,13 @@
+# ============================================================
+#  Articles, blog posts, features — anything written by you or
+#  about you, outside of journal papers.
+#
+#  Uncomment an entry or add your own. If the list stays empty,
+#  the "Writing" section hides itself automatically.
+# ============================================================
+
+# - title: "What single-cell data changed about how I think"
+#   outlet: "Personal blog"
+#   date: "2026"
+#   url: "https://example.com/post"
+#   blurb: "A short, non-technical take on what the resolution actually buys us."

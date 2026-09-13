@@ -1,42 +1,50 @@
-title: Neha Gupta
-description: PhD Candidate | Bioinformatics
+# ---- Site ----
+title: "Neha Gupta"
+tagline: "Bioinformatics · Single-Cell Genomics · Neurodegeneration"
+description: >-
+  Neha Gupta is a PhD candidate in Bioinformatics at the University of Georgia,
+  using single-cell genomics and computational structural biology to understand
+  kinase function in neurodegenerative disease.
 url: "https://nehagupta-16.github.io"
 baseurl: ""
+lang: en
 
-# Minimal Mistakes as remote theme
-remote_theme: "mmistakes/minimal-mistakes"
-plugins:
-  - jekyll-include-cache
-
-# Pick a built-in color skin (modern academic look)
-# Options include: air, aqua, contrast, dark, dirt, mint, neon, plum, sunrise
-minimal_mistakes_skin: "sunrise"
-
-# Site author (shows in sidebar/author card)
+# ---- Author / contact ----
 author:
   name: "Neha Gupta"
-  #avatar: "/assets/images/Saurav_profile.JPG"  
-  bio: "PhD Candidate | Bioinformatics"
+  initials: "NG"
+  role: "PhD Candidate in Bioinformatics"
+  institution: "University of Georgia"
   location: "Athens, GA"
-  #email: "saurav.choudhary@uga.edu"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/nehagupta-16"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/neha16/"
-    - label: "Google Scholar"
-      icon: "fas fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=u_bU1SEAAAAJ&hl=en"
+  email: "neha.gupta0316@gmail.com"
+  # Drop a headshot at assets/images/neha.jpg and uncomment the next line:
+  # avatar: "/assets/images/neha.jpg"
+  resume: "/assets/files/Neha_Gupta_Resume.pdf"
 
-# Defaults so pages look consistent
+social:
+  linkedin: "https://www.linkedin.com/in/nehagupta16/"
+  github: "https://github.com/nehagupta-16"
+  scholar: "https://scholar.google.com/citations?user=u_bU1SEAAAAJ&hl=en"
+
+# ---- Build ----
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
 defaults:
   - scope:
       path: ""
+      type: "pages"
     values:
-      layout: single
-      author_profile: true
+      layout: "default"
 
-# Cleaner URLs like /about/ instead of /about.html
-permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

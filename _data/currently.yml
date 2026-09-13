@@ -1,0 +1,23 @@
+# ============================================================
+#  The "Currently" list on the Beyond the Lab page.
+#  Small, human details. Update these whenever you like —
+#  a site that changes a little is worth more than one that
+#  never does.
+#
+#  Delete any line you don't want; the list just gets shorter.
+# ============================================================
+
+- label: "Reading"
+  value: "— add a book —"
+
+- label: "Learning"
+  value: "Guitar, slowly"
+
+- label: "Baking"
+  value: "— what came out of the oven most recently —"
+
+- label: "Listening to"
+  value: "— a record or podcast —"
+
+- label: "Looking forward to"
+  value: "— anything at all —"

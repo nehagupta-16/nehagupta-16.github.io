@@ -1,0 +1,128 @@
+---
+layout: default
+title: Home
+permalink: /
+description: "Neha Gupta — PhD candidate in Bioinformatics at the University of Georgia. A little about my work, and rather more about everything else."
+---
+
+<section class="intro">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <h1>Hello — I'm Neha.</h1>
+        <p class="lede">
+          I'm a PhD candidate in bioinformatics at the University of Georgia, which mostly means I spend my
+          days trying to get very large, very messy genomic datasets to tell me something honest about
+          the brain. Before Athens I was in Boston, and before that, India.
+        </p>
+        <p class="lede">
+          This site is partly a record of that work. It's also here because I don't think a CV says
+          very much about a person, and I'd rather you got the fuller version.
+        </p>
+      </div>
+
+      <div class="portrait">
+        <div class="portrait-frame">
+          {% if site.author.avatar %}
+            <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+          {% else %}
+            <span class="portrait-initials">N</span>
+          {% endif %}
+        </div>
+        <p class="portrait-cap">Athens, Georgia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="prose">
+      <p class="kicker">How I got here</p>
+      <hr class="rule">
+
+      <p>
+        I studied biotechnology at Amity University in Noida, expecting to spend my life at a bench. What
+        actually happened is that I found the computational side of biology somewhere in the middle of my
+        degree and never really left it. My first proper job was as a bioinformatics analyst in Indore,
+        building RNA-seq pipelines for colon cancer samples — the first time I understood that a well-built
+        analysis can be its own kind of craft.
+      </p>
+
+      <p>
+        In 2020 I moved to Boston for a master's at Boston University, which turned out to be a much bigger
+        move than I'd planned for — new country, new city, and a pandemic. I interned at the Broad Institute
+        working on microglia and Alzheimer's disease, then spent a year and a half at Cellarity, a biotech in
+        Somerville, where I learned what it means to build analysis infrastructure other people depend on.
+      </p>
+
+      <p>
+        In 2023 I came to the University of Georgia for my PhD, in Natarajan Kannan's lab. I work on kinases —
+        specifically, how they behave in neuronal cells, and what goes wrong with them in neurodegenerative
+        disease. It sits right where I like to be: half single-cell genomics, half protein structure.
+      </p>
+
+      <blockquote>
+        <p>
+          The thing that keeps me in this field is that neurodegeneration is still genuinely unsolved. We're
+          only now able to look at it one cell at a time, and that feels like being handed a much better
+          microscope right when it matters.
+        </p>
+      </blockquote>
+
+      <p>
+        Somewhere alongside all of that I ended up as President of UGA's Indian Student Association, which
+        was less a line on a CV than a year of learning how to feed 400 people at a Diwali event and keep
+        everyone speaking to each other. I was named Student Leader of the Year in 2025, and I'm still not
+        entirely sure who nominated me.
+      </p>
+
+      <a class="text-link" href="{{ '/research/' | relative_url }}">More about the research →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="prose">
+      <p class="kicker">Away from the screen</p>
+      <hr class="rule">
+
+      <p>
+        I play badminton, and I'm more competitive about it than anyone who has only met me at a whiteboard
+        would guess. I bake — it's chemistry with a better output, and it's the one part of my life where
+        following the protocol exactly is genuinely relaxing rather than obligatory. I'm teaching myself
+        guitar, badly, which I recommend to anyone several years into a PhD: it is good to be a beginner
+        at something again.
+      </p>
+
+      <p>
+        Three cities in ten years — Noida, Boston, Athens — has made me fairly good at arriving somewhere
+        new and building a life from nothing. I think that's the part of me that shows up most in how I work.
+      </p>
+
+      <a class="text-link" href="{{ '/beyond/' | relative_url }}">Photos and the longer version →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="prose">
+      <p class="kicker">Get in touch</p>
+      <hr class="rule">
+      <p>
+        I'm finishing my PhD and starting to look at what comes next — roles in computational biology and
+        bioinformatics, in industry or research. If you're working on something interesting, or you just
+        want to talk about single-cell data, I'd genuinely like to hear from you.
+      </p>
+      <ul class="inline-list">
+        <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+        <li><a href="{{ site.social.linkedin }}">LinkedIn</a></li>
+        <li><a href="{{ site.social.github }}">GitHub</a></li>
+        <li><a href="{{ site.social.scholar }}">Google Scholar</a></li>
+        <li><a href="{{ site.author.resume | relative_url }}">Résumé (PDF)</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
