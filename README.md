@@ -33,12 +33,14 @@ the page, as its CC BY 4.0 licence requires). To make all three stronger or
 fainter, change `--art-opacity` near the top of `assets/css/style.css`
 (e.g. `.15` → `.25`).
 
-### The mandala borders
+### The mandala borders and backgrounds
 
-The blue band at the top of every page and the green band at the bottom are
-`assets/images/mandala-top.svg` and `assets/images/mandala-bottom.svg`. They are
-generated vector art, so they stay crisp at any size. To make them taller or
-shorter, change `.mandala { height: … }` in `assets/css/style.css`.
+The blue band at the top of every page and the green band at the bottom are built in
+`assets/css/style.css` (`.mandala-top`, `.mandala-bottom`) from three images:
+`assets/images/mandala-ornate-blue.svg`, `mandala-ornate-green.svg` and the faint
+`mandala-ghosts.svg`. The same ornate mandalas form the very faint page background on
+Beyond the Lab (`body.page-beyond::before` — change its `opacity` to make it stronger
+or fainter).
 
 ## Running it locally (optional)
 

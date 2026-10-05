@@ -258,20 +258,43 @@ strong{font-weight:600;color:var(--ink)}
 .footer-bottom p{margin:0;font-size:.82rem;color:var(--ink-3)}
 
 
-/* ---------- Mandala bands ---------- */
-.mandala{
-  height:76px;background-repeat:no-repeat;background-size:auto 100%;
-  pointer-events:none;
+/* ---------- Mandala bands ----------
+   A layered mandala cut in half at each edge, faint "ghost" mandalas
+   between them, over a gradient: blue at the top, green at the bottom. */
+.mandala{height:124px;pointer-events:none}
+.mandala-top{
+  background:
+    url("../images/mandala-ornate-blue.svg") -200px 50% / 400px 400px no-repeat,
+    url("../images/mandala-ornate-blue.svg") calc(100% + 200px) 50% / 400px 400px no-repeat,
+    url("../images/mandala-ghosts.svg") 0 50% / auto 150% repeat-x,
+    linear-gradient(90deg,#153B73,#2A5A9C 55%,#3D7FC4);
 }
-.mandala-top{background-image:url("../images/mandala-top.svg");background-position:center top}
-.mandala-bottom{background-image:url("../images/mandala-bottom.svg");background-position:center bottom}
+.mandala-bottom{
+  background:
+    url("../images/mandala-ornate-green.svg") -200px 50% / 400px 400px no-repeat,
+    url("../images/mandala-ornate-green.svg") calc(100% + 200px) 50% / 400px 400px no-repeat,
+    url("../images/mandala-ghosts.svg") 0 50% / auto 150% repeat-x,
+    linear-gradient(90deg,#1B4F2E,#2F6F45 55%,#4A9562);
+}
+
+/* ---------- Beyond the Lab: very faint mandala page background ---------- */
+body.page-beyond::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    url("../images/mandala-ornate-blue.svg") right -230px top -150px / 680px 680px no-repeat,
+    url("../images/mandala-ornate-green.svg") left -280px bottom -260px / 760px 760px no-repeat;
+  opacity:.08;
+}
+
+/* ---------- Justified body text ---------- */
+main p,main li,main dd{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 
 /* ---------- Beyond the Lab: compact grid ---------- */
 .mini-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--rule);
+  border-block:1px solid var(--rule);padding-block:8px;
 }
-.mini{padding:26px 28px 26px 0;border-bottom:1px solid var(--rule)}
+.mini{padding:22px 32px 22px 0}
 .mini h3{font-family:var(--serif);font-weight:500;font-size:1.12rem;margin-bottom:.3em}
 .mini p{margin:0;color:var(--ink-2);font-size:.96rem;line-height:1.62}
 .mini .entry-note{margin:0 0 .5em}
@@ -323,7 +346,9 @@ main{overflow-x:clip}
   .footer-grid{grid-template-columns:1fr;gap:30px}
   .section{padding:48px 0}
   .intro{padding-top:44px}
-  .mandala{height:50px}
+  .mandala{height:76px;background-size:240px 240px,240px 240px,auto 150%,auto}
+  .mandala-top,.mandala-bottom{background-position:-120px 50%,calc(100% + 120px) 50%,0 50%,0 0}
+  body.page-beyond::before{background-size:380px 380px,420px 420px;background-position:right -150px top -90px,left -170px bottom -150px}
   .mini-grid{grid-template-columns:1fr}
   .split{grid-template-columns:1fr;gap:20px}
   .split .tl-item{grid-template-columns:1fr;gap:10px}
