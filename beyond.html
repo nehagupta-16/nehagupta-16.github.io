@@ -2,122 +2,44 @@
 layout: default
 title: Beyond the Lab
 permalink: /beyond/
-subtitle: "The parts that don't fit on a CV — courts, kitchens, a badly played guitar, and a few hundred people at a Diwali dinner."
-description: "Life outside research: badminton, baking, guitar, community, moving countries, photos and writing."
+subtitle: "The parts that don't fit on a CV."
+description: "Life outside research: badminton, baking, guitar, community, and a few photographs."
 ---
 
-<section class="section">
+<section class="section-tight">
   <div class="wrap">
-    <div class="prose">
-      <p>
-        I've never quite trusted the version of a person you get from their publication list. Here is the
-        rest of it — the things I do when the pipelines are running, and the things that have shaped how
-        I work more than any course did.
-      </p>
+    <div class="mini-grid">
+      <div class="mini">
+        <h3>Badminton</h3>
+        <p>The sport I actually care about — the one hour of the week where feedback is instant and nobody wants to discuss methodology.</p>
+      </div>
+      <div class="mini">
+        <h3>Baking</h3>
+        <p>Chemistry with a better output. Following the protocol exactly is the whole point, and at the end there's cake.</p>
+      </div>
+      <div class="mini">
+        <h3>Guitar</h3>
+        <p>Self-taught and still a beginner — a good reminder of what not knowing something feels like.</p>
+      </div>
+      <div class="mini">
+        <h3>Community</h3>
+        <p>President of UGA's Indian Student Association in 2024–25, and Student Leader of the Year in 2025.</p>
+      </div>
+      <div class="mini">
+        <h3>Mentoring</h3>
+        <p>Guided an NSF REU undergraduate through a summer research project in 2025 — the best part of grad school.</p>
+      </div>
+      <div class="mini">
+        <h3>Home, several times</h3>
+        <p>Noida → Indore → Boston → Athens. I've gotten good at arriving somewhere new and building a life from scratch.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section-tight">
   <div class="wrap">
-    <div class="entries">
-      <div class="entry">
-        <div class="entry-label">Badminton</div>
-        <div class="entry-body">
-          <p>
-            The sport I actually care about. It's the only hour of my week where the feedback is instant and
-            nobody wants to discuss methodology — you either got to the shuttle or you didn't. I'm competitive
-            about it in a way that reliably surprises people who have only met me at a whiteboard.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-label">Baking</div>
-        <div class="entry-body">
-          <p>
-            Chemistry with a better output. There's something restful about a protocol where following the
-            steps exactly is the whole point, rather than the beginning of an argument about parameters.
-            Precise ratios, controlled temperature, reproducible results — and at the end, cake.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-label">Guitar</div>
-        <div class="entry-body">
-          <p>
-            Self-taught, still bad, having a very good time. I'd recommend picking up something you're
-            genuinely a beginner at to anyone a few years into a PhD — it's a useful reminder of what it
-            feels like to not know things yet, which is easy to forget once you're the person other people
-            ask.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-label">
-          Community
-          <span class="entry-note">Indian Student Association, UGA · 2024–25</span>
-        </div>
-        <div class="entry-body">
-          <p>
-            I served as President of UGA's Indian Student Association. In practice this meant budgets,
-            volunteers, venue bookings and an enormous amount of food — but underneath that it meant giving
-            people who had just moved across the world somewhere to land. I was named Student Leader of the
-            Year by International Student Life in 2025, which I'm still quietly pleased about.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-label">Mentoring</div>
-        <div class="entry-body">
-          <p>
-            I mentored an NSF REU student through a full summer research project in 2025. Watching someone go
-            from "what is a FASTQ file" to presenting their own results in ten weeks is, honestly, the most
-            rewarding thing I've done in graduate school.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-label">
-          Moving
-          <span class="entry-note">Noida → Boston → Athens</span>
-        </div>
-        <div class="entry-body">
-          <p>
-            Three cities in ten years, each of them a full restart — new country, new weather, new everything.
-            I've gotten good at arriving somewhere with no network and slowly building one. It's the part of
-            my life that shows up most in how I work: I'm not thrown by starting from scratch.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{% if site.data.currently %}
-<section class="section section-tint">
-  <div class="wrap">
-    <p class="kicker">Currently</p>
-    <dl class="skills">
-      {% for item in site.data.currently %}
-      <div class="skill-row">
-        <dt>{{ item.label }}</dt>
-        <dd>{{ item.value }}</dd>
-      </div>
-      {% endfor %}
-    </dl>
-  </div>
-</section>
-{% endif %}
-
-<section class="section">
-  <div class="wrap">
     <p class="kicker">Photographs</p>
-    <hr class="rule">
     <div class="gallery">
       {% for item in site.data.gallery %}
       <div class="tile">
@@ -137,8 +59,21 @@ description: "Life outside research: badminton, baking, guitar, community, movin
   </div>
 </section>
 
+{% if site.data.currently %}
+<section class="section-tight">
+  <div class="wrap">
+    <p class="kicker">Currently</p>
+    <dl class="skills">
+      {% for item in site.data.currently %}
+      <div class="skill-row"><dt>{{ item.label }}</dt><dd>{{ item.value }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+{% endif %}
+
 {% if site.data.writing %}{% if site.data.writing.size > 0 %}
-<section class="section section-tint">
+<section class="section-tight">
   <div class="wrap">
     <p class="kicker">Writing</p>
     <div class="entries">
@@ -148,29 +83,10 @@ description: "Life outside research: badminton, baking, guitar, community, movin
           {% if post.url %}<a href="{{ post.url }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}
           <span class="entry-note">{{ post.outlet }}{% if post.date %} · {{ post.date }}{% endif %}</span>
         </div>
-        <div class="entry-body">
-          {% if post.blurb %}<p>{{ post.blurb }}</p>{% endif %}
-        </div>
+        <div class="entry-body">{% if post.blurb %}<p>{{ post.blurb }}</p>{% endif %}</div>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
 {% endif %}{% endif %}
-
-<section class="section">
-  <div class="wrap">
-    <div class="prose">
-      <p class="kicker">Say hello</p>
-      <hr class="rule">
-      <p>
-        Whether it's about single-cell data, a role you're hiring for, or where to find a decent bakery in
-        Athens — I'm easy to reach.
-      </p>
-      <ul class="inline-list">
-        <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-        <li><a href="{{ site.social.linkedin }}">LinkedIn</a></li>
-      </ul>
-    </div>
-  </div>
-</section>

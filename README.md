@@ -12,28 +12,25 @@ free on GitHub Pages.
 
 | I want to… | Edit this file |
 | --- | --- |
-| Change my name, tagline, email, social links, résumé path | `_config.yml` |
-| Add / rename / reorder the tabs in the top menu | `_data/navigation.yml` |
-| Add photos to the **Beyond the Lab** gallery | `_data/gallery.yml` + drop images in `assets/images/beyond/` |
-| Add blog posts, articles or features | `_data/writing.yml` |
-| Edit homepage text | `index.html` |
-| Edit research interests, skills, timeline | `research.html` |
-| Add a publication | `publications.html` |
-| Update CV content | `cv.html` |
-| Edit the fun / personal page | `beyond.html` |
-| Change colours, fonts, spacing | `assets/css/style.css` (the `:root` block at the top holds every colour) |
+| **Update anything from my résumé** (education, jobs, skills, publications, awards, presentations, leadership) | `_data/cv.yml` — the CV, Research and Publications pages all read from it |
+| Replace the downloadable résumé | `assets/files/Neha_Gupta_Resume.pdf` (keep the filename) |
+| Change my name, tagline, email, social links | `_config.yml` |
+| Change the homepage photo | replace `assets/images/neha.jpg` (portrait, roughly 4:5) |
+| Add / rename / reorder tabs in the top menu | `_data/navigation.yml` |
+| Add photos to **Beyond the Lab** | drop images in `assets/images/beyond/`, then list them in `_data/gallery.yml` |
+| Fill in the optional "Currently" list | `_data/currently.yml` (hidden until an entry is uncommented) |
+| Add blog posts, articles or features | `_data/writing.yml` (hidden while empty) |
+| Edit the homepage story | `index.html` |
+| Edit research descriptions | `research.html` |
+| Edit the personal page | `beyond.html` |
+| Change colours, fonts, spacing | `assets/css/style.css` — every colour is in the `:root` block at the top |
 
-### Adding a profile photo
+### The mandala borders
 
-1. Save a headshot as `assets/images/neha.jpg`
-2. In `_config.yml`, uncomment the `avatar:` line under `author:`
-
-Until then the site shows a colourful "NG" monogram, so nothing looks broken.
-
-### Updating the résumé
-
-Replace `assets/files/Neha_Gupta_Resume.pdf` with the new PDF, keeping the same filename —
-every download button will pick it up automatically.
+The blue band at the top of every page and the green band at the bottom are
+`assets/images/mandala-top.svg` and `assets/images/mandala-bottom.svg`. They are
+generated vector art, so they stay crisp at any size. To make them taller or
+shorter, change `.mandala { height: … }` in `assets/css/style.css`.
 
 ## Running it locally (optional)
 

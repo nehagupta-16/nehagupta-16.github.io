@@ -1,0 +1,133 @@
+# ============================================================
+#  Everything from the résumé lives here.
+#  The CV, Research and Publications pages all read from this
+#  file, so when the résumé changes, update it once here.
+#
+#  Small HTML is fine inside values, e.g. <em>italic</em>.
+# ============================================================
+
+education:
+  - degree: "PhD, Bioinformatics"
+    school: "University of Georgia"
+    place: "Athens, GA"
+    dates: "Aug 2023 — Present"
+    gpa: "4.00 / 4.00"
+  - degree: "MS, Bioinformatics"
+    school: "Boston University"
+    place: "Boston, MA"
+    dates: "Sep 2020 — Jan 2022"
+    gpa: "3.65 / 4.00"
+  - degree: "B.Tech, Biotechnology"
+    school: "Amity University"
+    place: "Noida, India"
+    dates: "Jul 2015 — Jun 2019"
+    gpa: "7.61 / 10.00"
+
+experience:
+  - title: "Graduate Research Assistant"
+    org: "University of Georgia"
+    place: "Athens, GA"
+    dates: "Aug 2023 — Present"
+    mentor: "Advisor: Dr. Natarajan Kannan"
+    points:
+      - "Conducting single-cell transcriptomic and isoform-level analyses of neuronal cells to resolve cell-type-specific kinase expression and splicing in neurodegenerative disease"
+      - "Applying a single-cell co-expression framework to identify kinase–substrate networks altered in Alzheimer's disease (manuscript in preparation)"
+      - "Characterized kinase regulatory motifs and catalytic features through structural modeling with AlphaFold3 and PyMOL, contributing to a published study of the neurodegeneration-linked DCLK3 kinase (<em>J. Biol. Chem.</em>, 2025)"
+      - "Built reproducible scRNA-seq and whole-genome variant-calling pipelines on a SLURM-managed HPC cluster for UGA's Computational Biology Consulting Group, supporting analyses for campus research labs"
+      - "Contributing to a multi-agent LLM system that predicts cancer mutations affecting phosphorylation sites and generates testable kinase–substrate specificity hypotheses (manuscript in preparation)"
+      - "Mentored an NSF REU undergraduate through a summer research project in bioinformatics (2025)"
+
+  - title: "Research Associate II, Bioinformatics"
+    org: "Cellarity Inc."
+    place: "Somerville, MA"
+    dates: "Feb 2022 — Jun 2023"
+    mentor: "Manager: Dr. Scott Steelman"
+    points:
+      - "Analyzed single-cell transcriptomic and Illumina sequencing data to support laboratory operations and prototype new workflows in a drug-discovery setting"
+      - "Designed and implemented QC modules for sequencing data, catching low-quality samples and runs before downstream analysis"
+      - "Managed and maintained bioinformatics data-processing pipelines across ongoing projects, working closely with wet-lab scientists to deliver analysis-ready data"
+
+  - title: "Computational Biology Intern"
+    org: "Broad Institute of MIT & Harvard"
+    place: "Cambridge, MA"
+    dates: "Jun 2021 — Dec 2021"
+    mentor: "Advisor: Dr. Ayshwarya Subramanian"
+    points:
+      - "Analyzed single-nucleus and single-cell RNA-seq data from TIM-3 (<em>Havcr2</em>)-deficient 5×FAD Alzheimer's mouse models, helping define a microglial subpopulation with increased pro-phagocytic and reduced pro-inflammatory gene expression; co-author, Kimura et al., <em>Nature</em> 2025"
+      - "Performed preprocessing, QC, integration, clustering, differential expression and functional annotation across snRNA-seq and bulk RNA-seq datasets from in vitro and in vivo disease models"
+      - "Supported a multi-omics study of the lipid kinase PI5P4Kγ through integrative analysis and visualization of transcriptomic and chromatin data"
+
+  - title: "Bioinformatics Analyst"
+    org: "Eminent Biosciences"
+    place: "Indore, India"
+    dates: "Oct 2019 — Aug 2020"
+    mentor: "Advisor: Anuraj Nayarisseri"
+    points:
+      - "Implemented a transcriptome expression analysis pipeline using HISAT2 and StringTie for 9 paired normal and colon cancer tissue samples, performing differential gene expression analysis with DESeq2"
+
+skills:
+  - area: "Bioinformatics techniques"
+    items: "Single-cell RNA-seq · single-nucleus RNA-seq · spatial transcriptomics · whole-genome & variant-calling analysis · bulk RNA-seq · pipeline development · protein structural analysis · drug discovery & molecular docking"
+  - area: "Bioinformatics tools"
+    items: "Cell Ranger · STAR · GATK · BWA · AlphaFold3 · PyMOL"
+  - area: "R & Bioconductor"
+    items: "Seurat · DESeq2 · dplyr · tidyverse · ggplot2 · enrichR · stringr · pubmed.mineR · biomaRt · Harmony"
+  - area: "Python"
+    items: "Scanpy · AnnData"
+  - area: "High-performance computing"
+    items: "Linux-based HPC · SLURM workload manager · AWS cluster computing · job scheduling & resource management"
+
+# Your name is highlighted automatically wherever "Gupta N" appears in authors.
+publications:
+  - title: "Immune checkpoint TIM-3 regulates microglia and Alzheimer's disease"
+    authors: "Kimura K, Subramanian A, Yin Z, Khalilnezhad A, Wu Y, He D, … Gupta N, … & Kuchroo VK"
+    venue: "Nature"
+    year: "2025"
+    details: "641(8063):718–731"
+    links:
+      - label: "PubMed"
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=Immune+checkpoint+TIM-3+regulates+microglia+and+Alzheimer%27s+disease"
+  - title: "Deciphering the unique autoregulatory mechanisms and substrate specificity of the understudied DCLK3 kinase linked to neurodegenerative diseases"
+    authors: "Lu JD, Zhao P, Prasad A, Gupta N, Gravel N, Shidhaye T, … & Kannan N"
+    venue: "Journal of Biological Chemistry"
+    year: "2025"
+    details: "301(10)"
+    links:
+      - label: "PubMed"
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=Deciphering+the+unique+autoregulatory+mechanisms+and+substrate+specificity+DCLK3+kinase"
+  - title: "In silico prediction, molecular docking and dynamics studies of steroidal alkaloids of <em>Holarrhena pubescens</em> Wall. ex G. Don to guanylyl cyclase C: implications in designing of novel antidiarrheal therapeutic strategies"
+    authors: "Gupta N, Choudhary SK, Bhagat N, Karthikeyan M, Chaturvedi A"
+    venue: "Molecules"
+    year: "2021"
+    details: "26(14):4147"
+    links:
+      - label: "DOI"
+        url: "https://doi.org/10.3390/molecules26144147"
+      - label: "Full text (open access)"
+        url: "https://www.mdpi.com/1420-3049/26/14/4147"
+
+awards:
+  - name: "Beverly B. Ledakowski Cancer Research Fellowship"
+    year: "2026"
+  - name: "Student Leader of the Year"
+    from: "International Student Life, University of Georgia"
+    year: "2025"
+  - name: "Merit-Based Scholarship"
+    from: "Boston University"
+    year: "2020"
+
+presentations:
+  - name: "Poster presentation, ASHG Annual Meeting"
+    from: "American Society of Human Genetics · Boston, MA"
+    year: "2025"
+  - name: "Poster presentations"
+    from: "National and international life sciences and bioinformatics conferences, India"
+    year: ""
+
+leadership:
+  - name: "President, Indian Student Association"
+    from: "University of Georgia"
+    year: "2024 — 2025"
+  - name: "Member, Faculty Speaker Seminar Nomination Committee"
+    from: "Institute of Bioinformatics, University of Georgia"
+    year: ""

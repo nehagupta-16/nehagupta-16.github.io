@@ -17,8 +17,8 @@ author:
   institution: "University of Georgia"
   location: "Athens, GA"
   email: "neha.gupta0316@gmail.com"
-  # Drop a headshot at assets/images/neha.jpg and uncomment the next line:
-  # avatar: "/assets/images/neha.jpg"
+  # Portrait used on the homepage and in link previews (LinkedIn, Slack, etc.)
+  avatar: "/assets/images/neha.jpg"
   resume: "/assets/files/Neha_Gupta_Resume.pdf"
 
 social:

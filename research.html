@@ -3,8 +3,9 @@ layout: default
 title: Research
 permalink: /research/
 subtitle: "I work at the join between single-cell genomics and protein structure, using both to ask what goes wrong with kinases in the diseased brain."
-description: "Research interests: single-cell and isoform transcriptomics, kinase structure and function, molecular docking, neurodegeneration."
+description: "Research: single-cell and isoform transcriptomics, kinase–substrate networks, kinase structure, LLM agents for kinase biology, genomics pipelines, and neurodegeneration."
 ---
+{% assign cv = site.data.cv %}
 
 <section class="section">
   <div class="wrap">
@@ -31,13 +32,13 @@ description: "Research interests: single-cell and isoform transcriptomics, kinas
       <div class="entry">
         <div class="entry-label">
           Single-cell &amp; isoform transcriptomics
-          <span class="entry-note">scRNA-seq · snRNA-seq · bulk RNA-seq</span>
+          <span class="entry-note">scRNA-seq · snRNA-seq · spatial</span>
         </div>
         <div class="entry-body">
           <p>
-            Resolving kinase expression and splicing at the level of individual neuronal cell types — clustering
-            and integration in Seurat, batch correction with Harmony, differential expression with DESeq2, and
-            isoform-level quantification where the transcript matters as much as the gene.
+            Resolving cell-type-specific kinase expression and splicing in neuronal cells, at the level of
+            individual isoforms. I'm also applying a single-cell co-expression framework to identify
+            kinase–substrate networks that are altered in Alzheimer's disease <em>(manuscript in preparation)</em>.
           </p>
         </div>
       </div>
@@ -49,24 +50,38 @@ description: "Research interests: single-cell and isoform transcriptomics, kinas
         </div>
         <div class="entry-body">
           <p>
-            Characterising functional motifs, catalytic machinery and autoregulation in kinases that haven't
-            had much attention. I contributed to work on DCLK3 — an understudied kinase linked to
-            neurodegeneration — deciphering how it regulates itself and what it prefers as a substrate.
+            Characterising regulatory motifs and catalytic features through structural modeling. This fed into a
+            2025 <em>Journal of Biological Chemistry</em> study of DCLK3 — an understudied kinase linked to
+            neurodegeneration — and how it regulates itself and chooses its substrates.
           </p>
         </div>
       </div>
 
       <div class="entry">
         <div class="entry-label">
-          Drug discovery &amp; docking
-          <span class="entry-note">Molecular docking · MD · protein modeling</span>
+          LLM agents for kinase biology
+          <span class="entry-note">Multi-agent systems</span>
         </div>
         <div class="entry-body">
           <p>
-            My earliest research was <em>in silico</em> drug discovery, and it still shapes how I think about a
-            target — docking and dynamics as a way of asking whether an idea is even chemically plausible
-            before anyone spends a year on it. My first paper came out of this: steroidal alkaloids from
-            <em>Holarrhena pubescens</em> modelled against guanylyl cyclase C.
+            I'm contributing to a multi-agent LLM system that predicts cancer mutations affecting phosphorylation
+            sites and generates testable hypotheses about kinase–substrate specificity
+            <em>(manuscript in preparation)</em>.
+          </p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-label">
+          Reproducible pipelines
+          <span class="entry-note">SLURM · HPC · GATK · STAR</span>
+        </div>
+        <div class="entry-body">
+          <p>
+            For UGA's Computational Biology Consulting Group I've built reproducible scRNA-seq and whole-genome
+            variant-calling pipelines on a SLURM-managed cluster that campus research labs use for their analyses.
+            Before that, at Cellarity, I designed the QC modules that caught low-quality samples and runs before
+            they reached downstream analysis.
           </p>
         </div>
       </div>
@@ -78,9 +93,23 @@ description: "Research interests: single-cell and isoform transcriptomics, kinas
         </div>
         <div class="entry-body">
           <p>
-            What actually goes wrong in the ageing and diseased brain, and which molecular players we can act
-            on. At the Broad I worked on TIM-3, an immune checkpoint that turns out to regulate microglia in
-            Alzheimer's disease; at UGA the focus is kinase dysfunction in neuronal cells.
+            At the Broad Institute I analysed single-cell and single-nucleus data from TIM-3 (<em>Havcr2</em>)-deficient
+            5×FAD Alzheimer's mouse models, helping define a microglial subpopulation with increased pro-phagocytic and
+            reduced pro-inflammatory gene expression — part of a 2025 <em>Nature</em> paper.
+          </p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-label">
+          Drug discovery &amp; docking
+          <span class="entry-note">Where I started</span>
+        </div>
+        <div class="entry-body">
+          <p>
+            My first-author paper modelled steroidal alkaloids from <em>Holarrhena pubescens</em> against guanylyl
+            cyclase C using docking and molecular dynamics. It still shapes how I think about a target: is an idea
+            even chemically plausible before anyone spends a year on it?
           </p>
         </div>
       </div>
@@ -92,26 +121,12 @@ description: "Research interests: single-cell and isoform transcriptomics, kinas
   <div class="wrap">
     <p class="kicker">Tools I use</p>
     <dl class="skills">
+      {% for s in cv.skills %}
       <div class="skill-row">
-        <dt>Languages</dt>
-        <dd>R · Python · Java · Shell</dd>
+        <dt>{{ s.area }}</dt>
+        <dd>{{ s.items }}</dd>
       </div>
-      <div class="skill-row">
-        <dt>R &amp; Bioconductor</dt>
-        <dd>Seurat · DESeq2 · tidyverse · ggplot2 · dplyr · Harmony · enrichR · biomaRt · stringr · pubmed.mineR</dd>
-      </div>
-      <div class="skill-row">
-        <dt>Genomics</dt>
-        <dd>scRNA-seq · snRNA-seq · bulk RNA-seq · ChIP-seq · isoform analysis · HISAT2 · StringTie · QC pipeline design</dd>
-      </div>
-      <div class="skill-row">
-        <dt>Structural</dt>
-        <dd>AlphaFold3 · PyMOL · molecular docking · MD simulations · protein modeling</dd>
-      </div>
-      <div class="skill-row">
-        <dt>Computing</dt>
-        <dd>AWS · cluster / HPC · Linux &amp; UNIX · Git</dd>
-      </div>
+      {% endfor %}
     </dl>
   </div>
 </section>
@@ -119,52 +134,21 @@ description: "Research interests: single-cell and isoform transcriptomics, kinas
 <section class="section">
   <div class="wrap">
     <p class="kicker">Where I've worked</p>
-    <ul class="timeline">
+    <ul class="timeline roles">
+      {% for job in cv.experience %}
       <li class="tl-item">
-        <div class="tl-when">Aug 2023 — Present</div>
+        <div class="tl-when">{{ job.dates }}</div>
         <div class="tl-body">
-          <h3>Graduate Research Assistant</h3>
-          <p class="tl-where">University of Georgia · Athens, GA · with Dr. Natarajan Kannan</p>
-          <ul>
-            <li>Single-cell isoform and transcriptomic analysis of kinase function in neuronal cells affecting neurodegenerative disease</li>
-            <li>Computational structural analysis with PyMOL and AlphaFold3 to characterise kinase functional motifs and catalytic activity</li>
-          </ul>
+          <h3>{{ job.title }}</h3>
+          <p class="tl-where">{{ job.org }} · {{ job.place }}</p>
         </div>
       </li>
-      <li class="tl-item">
-        <div class="tl-when">Feb 2022 — Jun 2023</div>
-        <div class="tl-body">
-          <h3>Research Associate II, Bioinformatics</h3>
-          <p class="tl-where">Cellarity Inc. · Somerville, MA · with Dr. Scott Steelman</p>
-          <ul>
-            <li>Analysed transcriptome, single-cell and Illumina sequencing data supporting lab operations and workflow prototyping</li>
-            <li>Designed and implemented data QC modules and managed bioinformatics processing pipelines</li>
-          </ul>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-when">Jun 2021 — Dec 2021</div>
-        <div class="tl-body">
-          <h3>Computational Biology Intern</h3>
-          <p class="tl-where">Broad Institute of MIT &amp; Harvard · Cambridge, MA · with Dr. Ayshwarya Subramanian</p>
-          <ul>
-            <li>Computational analysis of high-throughput sequencing datasets (scRNA-seq, nuc-seq, bulk RNA, ChIP-seq) from in-vitro and in-vivo disease models</li>
-            <li>Preprocessing, statistical analysis, functional annotation and visualisation across projects focused on the TIM-3 gene</li>
-          </ul>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-when">Oct 2019 — Aug 2020</div>
-        <div class="tl-body">
-          <h3>Bioinformatics Analyst</h3>
-          <p class="tl-where">Eminent Biosciences · Indore, India · with Anuraj Nayarisseri</p>
-          <ul>
-            <li>Built a transcriptome expression pipeline with HISAT2 and StringTie across 9 paired normal and colon cancer tissue samples</li>
-            <li>Differential gene expression analysis with DESeq2</li>
-          </ul>
-        </div>
-      </li>
+      {% endfor %}
     </ul>
-    <a class="text-link" href="{{ '/publications/' | relative_url }}">Publications →</a>
+    <p style="margin-top:28px">
+      <a class="text-link" href="{{ '/cv/' | relative_url }}">Full details in the CV →</a>
+      &nbsp;&nbsp;
+      <a class="text-link" href="{{ '/publications/' | relative_url }}">Publications →</a>
+    </p>
   </div>
 </section>

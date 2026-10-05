@@ -3,26 +3,17 @@
 #
 #  To add one:
 #    1. Put the image in  assets/images/beyond/
-#    2. Fill in the image: filename below.
+#    2. Fill in the image: filename below (and edit the caption).
+#  Add as many entries as you like; they flow into rows of three.
 #
-#  Until an image is added, the tile shows a quiet placeholder
-#  with the caption, so the page never looks broken.
+#  Until an image is added, the tile shows a quiet placeholder.
 # ============================================================
 
-- caption: "League night. I am more competitive than I look."
+- caption: "Badminton"
   # image: "badminton.jpg"
 
-- caption: "Sunday baking — the one protocol I enjoy following exactly."
+- caption: "Baking"
   # image: "baking.jpg"
 
-- caption: "Six months into teaching myself guitar."
-  # image: "guitar.jpg"
-
-- caption: "Diwali with the Indian Student Association at UGA."
-  # image: "isa-diwali.jpg"
-
-- caption: "ASHG in Boston, 2025 — back in my old city for a few days."
-  # image: "ashg.jpg"
-
-- caption: "Athens in autumn."
-  # image: "athens.jpg"
+- caption: "Indian Student Association, UGA"
+  # image: "isa.jpg"

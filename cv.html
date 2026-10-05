@@ -3,8 +3,9 @@ layout: default
 title: CV
 permalink: /cv/
 subtitle: "The short version. The PDF has everything on two pages."
-description: "Curriculum vitae of Neha Gupta: education, research experience, technical skills, awards and leadership."
+description: "Curriculum vitae of Neha Gupta: education, experience, technical skills, publications, awards, presentations and leadership."
 ---
+{% assign cv = site.data.cv %}
 
 <section class="section-tight">
   <div class="wrap">
@@ -21,27 +22,15 @@ description: "Curriculum vitae of Neha Gupta: education, research experience, te
   <div class="wrap">
     <p class="kicker">Education</p>
     <ul class="timeline">
+      {% for e in cv.education %}
       <li class="tl-item">
-        <div class="tl-when">Aug 2023 — Present</div>
+        <div class="tl-when">{{ e.dates }}</div>
         <div class="tl-body">
-          <h3>PhD, Bioinformatics</h3>
-          <p class="tl-where">University of Georgia · Athens, GA · GPA 4.00 / 4.00</p>
+          <h3>{{ e.degree }}</h3>
+          <p class="tl-where">{{ e.school }} · {{ e.place }}{% if e.gpa %} · GPA {{ e.gpa }}{% endif %}</p>
         </div>
       </li>
-      <li class="tl-item">
-        <div class="tl-when">Sep 2020 — Jan 2022</div>
-        <div class="tl-body">
-          <h3>MS, Bioinformatics</h3>
-          <p class="tl-where">Boston University · Boston, MA · GPA 3.65 / 4.00</p>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-when">Jul 2015 — Jun 2019</div>
-        <div class="tl-body">
-          <h3>B.Tech, Biotechnology</h3>
-          <p class="tl-where">Amity University · Noida, India · GPA 7.61 / 10.00</p>
-        </div>
-      </li>
+      {% endfor %}
     </ul>
   </div>
 </section>
@@ -50,50 +39,18 @@ description: "Curriculum vitae of Neha Gupta: education, research experience, te
   <div class="wrap">
     <p class="kicker">Experience</p>
     <ul class="timeline">
+      {% for job in cv.experience %}
       <li class="tl-item">
-        <div class="tl-when">Aug 2023 — Present</div>
+        <div class="tl-when">{{ job.dates }}</div>
         <div class="tl-body">
-          <h3>Graduate Research Assistant</h3>
-          <p class="tl-where">University of Georgia · Athens, GA · Advisor: Dr. Natarajan Kannan</p>
+          <h3>{{ job.title }}</h3>
+          <p class="tl-where">{{ job.org }} · {{ job.place }}{% if job.mentor %} · {{ job.mentor }}{% endif %}</p>
           <ul>
-            <li>Conducting single-cell isoform and transcriptomic analysis to elucidate kinase function in neuronal cells affecting neurodegenerative diseases</li>
-            <li>Performing computational protein structural analysis using PyMOL and AlphaFold3 to characterise kinase functional motifs and catalytic activity</li>
+            {% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}
           </ul>
         </div>
       </li>
-      <li class="tl-item">
-        <div class="tl-when">Feb 2022 — Jun 2023</div>
-        <div class="tl-body">
-          <h3>Research Associate II, Bioinformatics</h3>
-          <p class="tl-where">Cellarity Inc. · Somerville, MA · Advisor: Dr. Scott Steelman</p>
-          <ul>
-            <li>Analysed transcriptome, single-cell and Illumina sequencing data supporting laboratory operations and workflow prototyping</li>
-            <li>Designed and implemented data QC analysis modules and managed bioinformatics data processing pipelines</li>
-          </ul>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-when">Jun 2021 — Dec 2021</div>
-        <div class="tl-body">
-          <h3>Computational Biology Intern</h3>
-          <p class="tl-where">Broad Institute of MIT &amp; Harvard · Cambridge, MA · Advisor: Dr. Ayshwarya Subramanian</p>
-          <ul>
-            <li>Executed computational analysis on high-throughput sequencing datasets (scRNA-seq, nuc-seq, bulk RNA, ChIP-seq) from in-vitro and in-vivo disease models</li>
-            <li>Performed preprocessing, statistical analysis, functional annotation and visualisation of multi-project datasets focusing on the TIM-3 gene</li>
-          </ul>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-when">Oct 2019 — Aug 2020</div>
-        <div class="tl-body">
-          <h3>Bioinformatics Analyst</h3>
-          <p class="tl-where">Eminent Biosciences · Indore, India · Advisor: Anuraj Nayarisseri</p>
-          <ul>
-            <li>Implemented a transcriptome expression analysis pipeline using HISAT2 and StringTie for 9 paired normal and colon cancer tissue samples</li>
-            <li>Performed differential gene expression analysis with DESeq2</li>
-          </ul>
-        </div>
-      </li>
+      {% endfor %}
     </ul>
   </div>
 </section>
@@ -102,68 +59,69 @@ description: "Curriculum vitae of Neha Gupta: education, research experience, te
   <div class="wrap">
     <p class="kicker">Technical skills</p>
     <dl class="skills">
+      {% for s in cv.skills %}
       <div class="skill-row">
-        <dt>Bioinformatics</dt>
-        <dd>Single-cell RNA-seq · single-nucleus RNA-seq · bulk RNA-seq · ChIP-seq · isoform analysis · molecular docking · protein modeling · drug discovery</dd>
+        <dt>{{ s.area }}</dt>
+        <dd>{{ s.items }}</dd>
       </div>
-      <div class="skill-row">
-        <dt>Programming</dt>
-        <dd>R · Python · Java · Shell scripting</dd>
-      </div>
-      <div class="skill-row">
-        <dt>R &amp; Bioconductor</dt>
-        <dd>Seurat · DESeq2 · dplyr · tidyverse · ggplot2 · enrichR · stringr · pubmed.mineR · biomaRt · Harmony</dd>
-      </div>
-      <div class="skill-row">
-        <dt>Structural biology</dt>
-        <dd>AlphaFold3 · PyMOL · MD simulations</dd>
-      </div>
-      <div class="skill-row">
-        <dt>Computing</dt>
-        <dd>AWS &amp; cluster computing · Linux / UNIX · Git</dd>
-      </div>
+      {% endfor %}
     </dl>
   </div>
 </section>
 
 <section class="section section-tint">
   <div class="wrap">
-    <p class="kicker">Awards &amp; leadership</p>
-    <ul class="timeline">
-      <li class="tl-item">
-        <div class="tl-when">2026</div>
-        <div class="tl-body">
-          <h3>Beverly B. Ledakowski Cancer Research Fellowship</h3>
-        </div>
+    <p class="kicker">Publications</p>
+    <ul class="pub-list">
+      {% for pub in cv.publications %}
+      <li class="pub">
+        <p class="pub-venue">{{ pub.venue }} · {{ pub.year }}</p>
+        <h3>{{ pub.title }}</h3>
+        <p class="authors">{{ pub.authors | replace: 'Gupta N', '<span class="me">Gupta N</span>' }}</p>
       </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="kicker">Awards</p>
+    <ul class="timeline roles">
+      {% for a in cv.awards %}
       <li class="tl-item">
-        <div class="tl-when">2025</div>
-        <div class="tl-body">
-          <h3>Student Leader of the Year</h3>
-          <p class="tl-where">International Student Life, University of Georgia</p>
-        </div>
+        <div class="tl-when">{{ a.year }}</div>
+        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
       </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap">
+    <p class="kicker">Presentations</p>
+    <ul class="timeline roles">
+      {% for a in cv.presentations %}
       <li class="tl-item">
-        <div class="tl-when">2024 — 2025</div>
-        <div class="tl-body">
-          <h3>President, Indian Student Association</h3>
-          <p class="tl-where">University of Georgia</p>
-        </div>
+        <div class="tl-when">{{ a.year }}</div>
+        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
       </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="kicker">Leadership</p>
+    <ul class="timeline roles">
+      {% for a in cv.leadership %}
       <li class="tl-item">
-        <div class="tl-when">2025</div>
-        <div class="tl-body">
-          <h3>NSF REU mentor</h3>
-          <p class="tl-where">Mentored an undergraduate researcher through a summer project</p>
-        </div>
+        <div class="tl-when">{{ a.year }}</div>
+        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
       </li>
-      <li class="tl-item">
-        <div class="tl-when">2025</div>
-        <div class="tl-body">
-          <h3>Poster presentation, ASHG</h3>
-          <p class="tl-where">American Society of Human Genetics &amp; Genomics · Boston, MA</p>
-        </div>
-      </li>
+      {% endfor %}
     </ul>
   </div>
 </section>
