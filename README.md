@@ -12,7 +12,8 @@ free on GitHub Pages.
 
 | I want to… | Edit this file |
 | --- | --- |
-| **Update anything from my résumé** (education, jobs, skills, publications, awards, presentations, leadership) | `_data/cv.yml` — the CV, Research and Publications pages all read from it |
+| **Update résumé facts** (education, job titles & dates, skills, publications, awards, presentations, leadership) | `_data/cv.yml` — the Research & CV and Publications pages read from it |
+| Edit what I did in each role / research descriptions | `research.html` (the "What I work on" section) |
 | Replace the downloadable résumé | `assets/files/Neha_Gupta_Resume.pdf` (keep the filename) |
 | Change my name, tagline, email, social links | `_config.yml` |
 | Change the homepage photo | replace `assets/images/neha.jpg` (portrait, roughly 4:5) |
@@ -21,7 +22,6 @@ free on GitHub Pages.
 | Fill in the optional "Currently" list | `_data/currently.yml` (hidden until an entry is uncommented) |
 | Add blog posts, articles or features | `_data/writing.yml` (hidden while empty) |
 | Edit the homepage story | `index.html` |
-| Edit research descriptions | `research.html` |
 | Edit the personal page | `beyond.html` |
 | Change colours, fonts, spacing | `assets/css/style.css` — every colour is in the `:root` block at the top |
 

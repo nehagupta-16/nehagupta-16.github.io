@@ -1,127 +1,17 @@
 ---
-layout: default
-title: CV
+layout: null
 permalink: /cv/
-subtitle: "The short version. The PDF has everything on two pages."
-description: "Curriculum vitae of Neha Gupta: education, experience, technical skills, publications, awards, presentations and leadership."
 ---
-{% assign cv = site.data.cv %}
-
-<section class="section-tight">
-  <div class="wrap">
-    <ul class="inline-list">
-      <li><a href="{{ site.author.resume | relative_url }}">Download résumé (PDF)</a></li>
-      <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-      <li><a href="{{ site.social.linkedin }}">LinkedIn</a></li>
-      <li><a href="{{ site.social.scholar }}">Google Scholar</a></li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <p class="kicker">Education</p>
-    <ul class="timeline">
-      {% for e in cv.education %}
-      <li class="tl-item">
-        <div class="tl-when">{{ e.dates }}</div>
-        <div class="tl-body">
-          <h3>{{ e.degree }}</h3>
-          <p class="tl-where">{{ e.school }} · {{ e.place }}{% if e.gpa %} · GPA {{ e.gpa }}{% endif %}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section section-tint">
-  <div class="wrap">
-    <p class="kicker">Experience</p>
-    <ul class="timeline">
-      {% for job in cv.experience %}
-      <li class="tl-item">
-        <div class="tl-when">{{ job.dates }}</div>
-        <div class="tl-body">
-          <h3>{{ job.title }}</h3>
-          <p class="tl-where">{{ job.org }} · {{ job.place }}{% if job.mentor %} · {{ job.mentor }}{% endif %}</p>
-          <ul>
-            {% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}
-          </ul>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <p class="kicker">Technical skills</p>
-    <dl class="skills">
-      {% for s in cv.skills %}
-      <div class="skill-row">
-        <dt>{{ s.area }}</dt>
-        <dd>{{ s.items }}</dd>
-      </div>
-      {% endfor %}
-    </dl>
-  </div>
-</section>
-
-<section class="section section-tint">
-  <div class="wrap">
-    <p class="kicker">Publications</p>
-    <ul class="pub-list">
-      {% for pub in cv.publications %}
-      <li class="pub">
-        <p class="pub-venue">{{ pub.venue }} · {{ pub.year }}</p>
-        <h3>{{ pub.title }}</h3>
-        <p class="authors">{{ pub.authors | replace: 'Gupta N', '<span class="me">Gupta N</span>' }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <p class="kicker">Awards</p>
-    <ul class="timeline roles">
-      {% for a in cv.awards %}
-      <li class="tl-item">
-        <div class="tl-when">{{ a.year }}</div>
-        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="wrap">
-    <p class="kicker">Presentations</p>
-    <ul class="timeline roles">
-      {% for a in cv.presentations %}
-      <li class="tl-item">
-        <div class="tl-when">{{ a.year }}</div>
-        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <p class="kicker">Leadership</p>
-    <ul class="timeline roles">
-      {% for a in cv.leadership %}
-      <li class="tl-item">
-        <div class="tl-when">{{ a.year }}</div>
-        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moved · {{ site.title }}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ '/research/' | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/research/#experience' | relative_url }}">
+</head>
+<body>
+<p>The CV now lives on the <a href="{{ '/research/#experience' | relative_url }}">Research &amp; CV</a> page.</p>
+</body>
+</html>

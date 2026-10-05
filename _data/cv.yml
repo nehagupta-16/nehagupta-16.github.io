@@ -1,7 +1,10 @@
 # ============================================================
-#  Everything from the résumé lives here.
-#  The CV, Research and Publications pages all read from this
-#  file, so when the résumé changes, update it once here.
+#  Résumé facts used across the site:
+#    - Research & CV page: education, experience (roles), skills,
+#      awards, leadership
+#    - Publications page: publications, presentations
+#  The longer descriptions of what you did in each role live in
+#  research.html under "What I work on".
 #
 #  Small HTML is fine inside values, e.g. <em>italic</em>.
 # ============================================================
@@ -29,41 +32,24 @@ experience:
     place: "Athens, GA"
     dates: "Aug 2023 — Present"
     mentor: "Advisor: Dr. Natarajan Kannan"
-    points:
-      - "Conducting single-cell transcriptomic and isoform-level analyses of neuronal cells to resolve cell-type-specific kinase expression and splicing in neurodegenerative disease"
-      - "Applying a single-cell co-expression framework to identify kinase–substrate networks altered in Alzheimer's disease (manuscript in preparation)"
-      - "Characterized kinase regulatory motifs and catalytic features through structural modeling with AlphaFold3 and PyMOL, contributing to a published study of the neurodegeneration-linked DCLK3 kinase (<em>J. Biol. Chem.</em>, 2025)"
-      - "Built reproducible scRNA-seq and whole-genome variant-calling pipelines on a SLURM-managed HPC cluster for UGA's Computational Biology Consulting Group, supporting analyses for campus research labs"
-      - "Contributing to a multi-agent LLM system that predicts cancer mutations affecting phosphorylation sites and generates testable kinase–substrate specificity hypotheses (manuscript in preparation)"
-      - "Mentored an NSF REU undergraduate through a summer research project in bioinformatics (2025)"
 
   - title: "Research Associate II, Bioinformatics"
     org: "Cellarity Inc."
     place: "Somerville, MA"
     dates: "Feb 2022 — Jun 2023"
     mentor: "Manager: Dr. Scott Steelman"
-    points:
-      - "Analyzed single-cell transcriptomic and Illumina sequencing data to support laboratory operations and prototype new workflows in a drug-discovery setting"
-      - "Designed and implemented QC modules for sequencing data, catching low-quality samples and runs before downstream analysis"
-      - "Managed and maintained bioinformatics data-processing pipelines across ongoing projects, working closely with wet-lab scientists to deliver analysis-ready data"
 
   - title: "Computational Biology Intern"
     org: "Broad Institute of MIT & Harvard"
     place: "Cambridge, MA"
     dates: "Jun 2021 — Dec 2021"
     mentor: "Advisor: Dr. Ayshwarya Subramanian"
-    points:
-      - "Analyzed single-nucleus and single-cell RNA-seq data from TIM-3 (<em>Havcr2</em>)-deficient 5×FAD Alzheimer's mouse models, helping define a microglial subpopulation with increased pro-phagocytic and reduced pro-inflammatory gene expression; co-author, Kimura et al., <em>Nature</em> 2025"
-      - "Performed preprocessing, QC, integration, clustering, differential expression and functional annotation across snRNA-seq and bulk RNA-seq datasets from in vitro and in vivo disease models"
-      - "Supported a multi-omics study of the lipid kinase PI5P4Kγ through integrative analysis and visualization of transcriptomic and chromatin data"
 
   - title: "Bioinformatics Analyst"
     org: "Eminent Biosciences"
     place: "Indore, India"
     dates: "Oct 2019 — Aug 2020"
     mentor: "Advisor: Anuraj Nayarisseri"
-    points:
-      - "Implemented a transcriptome expression analysis pipeline using HISAT2 and StringTie for 9 paired normal and colon cancer tissue samples, performing differential gene expression analysis with DESeq2"
 
 skills:
   - area: "Bioinformatics techniques"
@@ -128,6 +114,9 @@ leadership:
   - name: "President, Indian Student Association"
     from: "University of Georgia"
     year: "2024 — 2025"
+  - name: "Research mentor, NSF REU"
+    from: "Guided an undergraduate through a summer project in bioinformatics"
+    year: "2025"
   - name: "Member, Faculty Speaker Seminar Nomination Committee"
     from: "Institute of Bioinformatics, University of Georgia"
     year: ""

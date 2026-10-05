@@ -278,6 +278,10 @@ strong{font-weight:600;color:var(--ink)}
 .roles .tl-item{padding:20px 0}
 .roles .tl-where{margin:0}
 
+/* ---------- Side-by-side lists (awards / leadership) ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+.split .tl-item{grid-template-columns:96px 1fr;gap:20px}
+
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .intro-grid{grid-template-columns:1fr;gap:40px;max-width:600px}
@@ -305,6 +309,8 @@ strong{font-weight:600;color:var(--ink)}
   .intro{padding-top:44px}
   .mandala{height:50px}
   .mini-grid{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr;gap:20px}
+  .split .tl-item{grid-template-columns:1fr;gap:10px}
   .mini{padding-right:0}
 }
 @media (prefers-reduced-motion:reduce){
