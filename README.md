@@ -25,6 +25,14 @@ free on GitHub Pages.
 | Edit the personal page | `beyond.html` |
 | Change colours, fonts, spacing | `assets/css/style.css` — every colour is in the `:root` block at the top |
 
+### The science drawings on Research & CV
+
+The faint brain, kinase and UMAP drawings live in `assets/images/research/`.
+The kinase is traced from the AlphaFold model of DCLK3 (credited at the bottom of
+the page, as its CC BY 4.0 licence requires). To make all three stronger or
+fainter, change `--art-opacity` near the top of `assets/css/style.css`
+(e.g. `.15` → `.25`).
+
 ### The mandala borders
 
 The blue band at the top of every page and the green band at the bottom are

@@ -59,7 +59,8 @@
 <main id="main">
 {% if page.url != '/' %}
 <section class="page-head">
-  <div class="wrap">
+  <div class="wrap{% if page.head_art %} has-art{% endif %}">
+    {% if page.head_art %}<img class="sci-art sci-art-head" src="{{ page.head_art | relative_url }}" alt="" aria-hidden="true">{% endif %}
     {% if page.eyebrow %}<p class="kicker">{{ page.eyebrow }}</p>{% endif %}
     <h1>{{ page.title }}</h1>
     {% if page.subtitle %}<p class="page-sub">{{ page.subtitle }}</p>{% endif %}

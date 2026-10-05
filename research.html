@@ -2,6 +2,7 @@
 layout: default
 title: Research & CV
 permalink: /research/
+head_art: /assets/images/research/brain.svg
 subtitle: "I work at the join between single-cell genomics and protein structure, using both to ask what goes wrong with kinases in the diseased brain."
 description: "Research and CV of Neha Gupta: single-cell and isoform transcriptomics, kinase structure, LLM agents for kinase biology, genomics pipelines, neurodegeneration — plus experience, education, skills and awards."
 ---
@@ -19,7 +20,8 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
 </section>
 
 <section class="section-tight">
-  <div class="wrap">
+  <div class="wrap has-art">
+    <img class="sci-art sci-art-kinase" src="{{ '/assets/images/research/kinase.svg' | relative_url }}" alt="" aria-hidden="true">
     <div class="prose">
       <p>
         Most of what I do starts with the same problem: a bulk experiment averages away exactly the cells you
@@ -150,7 +152,8 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
 </section>
 
 <section class="section" id="education">
-  <div class="wrap">
+  <div class="wrap has-art">
+    <img class="sci-art sci-art-umap" src="{{ '/assets/images/research/umap.svg' | relative_url }}" alt="" aria-hidden="true">
     <p class="kicker">Education</p>
     <ul class="timeline roles">
       {% for e in cv.education %}
@@ -204,5 +207,12 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
         {% endfor %}
       </ul>
     </div>
+  </div>
+  <div class="wrap">
+    <p class="note">
+      Background illustrations: the kinase is drawn from the AlphaFold model of DCLK3
+      (<a href="https://alphafold.ebi.ac.uk/entry/Q9C098">AF-Q9C098-F1</a>, AlphaFold Protein Structure Database,
+      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>); the UMAP is illustrative.
+    </p>
   </div>
 </section>
