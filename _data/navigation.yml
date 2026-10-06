@@ -3,7 +3,7 @@ main:
     url: /
   - title: "Research & CV"
     url: /research/
-  - title: "Publications"
-    url: /publications/
   - title: "Beyond the Lab"
     url: /beyond/
+  - title: "Let's get in touch"
+    url: /contact/

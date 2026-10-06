@@ -2,7 +2,6 @@
 layout: default
 title: Beyond the Lab
 permalink: /beyond/
-body_class: page-beyond
 subtitle: "The parts that don't fit on a CV."
 description: "Life outside research: badminton, baking, guitar, community, and a few photographs."
 ---
@@ -34,27 +33,26 @@ description: "Life outside research: badminton, baking, guitar, community, and a
   </div>
 </section>
 
+{% assign photo_count = 0 %}{% for item in site.data.gallery %}{% if item.image %}{% assign photo_count = photo_count | plus: 1 %}{% endif %}{% endfor %}
+{% if photo_count > 0 %}
 <section class="section-tight">
   <div class="wrap">
     <p class="kicker">Photographs</p>
     <div class="gallery">
-      {% for item in site.data.gallery %}
+      {% for item in site.data.gallery %}{% if item.image %}
       <div class="tile">
         <figure>
           <div class="tile-img">
-            {% if item.image %}
-              <img src="{{ '/assets/images/beyond/' | append: item.image | relative_url }}" alt="{{ item.caption }}" loading="lazy">
-            {% else %}
-              <span class="tile-empty">photograph to come</span>
-            {% endif %}
+            <img src="{{ '/assets/images/beyond/' | append: item.image | relative_url }}" alt="{{ item.caption }}" loading="lazy">
           </div>
           <figcaption>{{ item.caption }}</figcaption>
         </figure>
       </div>
-      {% endfor %}
+      {% endif %}{% endfor %}
     </div>
   </div>
 </section>
+{% endif %}
 
 {% if site.data.currently %}
 <section class="section-tight">

@@ -9,9 +9,9 @@
   --paper-2:#F5F0E8;
   --paper-3:#EFE8DD;
 
-  --ink:#2B2724;
-  --ink-2:#5C554C;
-  --ink-3:#8B8278;
+  --ink:#1A1816;     /* near-black: strong text */
+  --ink-2:#26231F;   /* body text */
+  --ink-3:#45403A;   /* secondary text: dates, places, captions */
 
   --rule:#E5DDD1;
   --rule-soft:#EFE9DF;
@@ -20,6 +20,7 @@
   --accent-hover:#1E4A8A;
   --accent-soft:#E4ECF7;
   --accent-line:rgba(42,90,156,.32);
+  --heading:#1E4A8A;
 
   --green:#3B7A4C;
   --green-hover:#2D6A3E;
@@ -54,7 +55,7 @@ h1,h2,h3,h4{
   line-height:1.2;
   letter-spacing:-.012em;
   margin:0 0 .55em;
-  color:var(--ink);
+  color:var(--heading);
 }
 h1{font-size:clamp(2.1rem,4.6vw,3.1rem)}
 h2{font-size:clamp(1.55rem,3vw,2.05rem)}
@@ -114,7 +115,7 @@ strong{font-weight:600;color:var(--ink)}
 /* ---------- Sections ---------- */
 .section{padding:66px 0}
 .section-tight{padding:44px 0}
-.section-tint{background:var(--paper-2);border-block:1px solid var(--rule-soft)}
+.section-tint{background:rgba(242,236,226,.55);border-block:1px solid var(--rule-soft)}
 
 .kicker{
   font-family:var(--sans);font-size:.74rem;font-weight:600;
@@ -149,7 +150,7 @@ strong{font-weight:600;color:var(--ink)}
   padding:32px 0;border-bottom:1px solid var(--rule);
 }
 .entry-label{
-  font-family:var(--serif);font-size:1.14rem;font-weight:500;color:var(--ink);
+  font-family:var(--serif);font-size:1.14rem;font-weight:500;color:var(--heading);
   line-height:1.35;
 }
 .entry-note{display:block;margin-top:6px;font-family:var(--sans);font-size:.8rem;color:var(--ink-3);font-weight:400}
@@ -241,7 +242,7 @@ strong{font-weight:600;color:var(--ink)}
   background:var(--paper-2);border-top:1px solid var(--rule);
 }
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px}
-.footer-name{font-family:var(--serif);font-size:1.3rem;font-weight:500;margin-bottom:.3em}
+.footer-name{font-family:var(--serif);font-size:1.3rem;font-weight:500;margin-bottom:.3em;color:var(--heading)}
 .footer-role{margin:0;font-size:.92rem;color:var(--ink-3);line-height:1.7}
 .footer-h{
   font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;
@@ -277,17 +278,35 @@ strong{font-weight:600;color:var(--ink)}
     linear-gradient(90deg,#1B4F2E,#2F6F45 55%,#4A9562);
 }
 
-/* ---------- Beyond the Lab: very faint mandala page background ---------- */
-body.page-beyond::before{
-  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:
-    url("../images/mandala-ornate-blue.svg") right -230px top -150px / 680px 680px no-repeat,
-    url("../images/mandala-ornate-green.svg") left -280px bottom -260px / 760px 760px no-repeat;
+/* ---------- Page backgrounds ----------
+   Every page: a faint seamless mandala wallpaper (::before), plus one large
+   line mandala shading from blue to green, anchored to a different edge on
+   each page (::after). Beyond the Lab keeps its two layered corner mandalas. */
+body::before,body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-repeat:no-repeat;
+}
+body::before{
+  background-image:url("../images/pattern-tile.svg");background-repeat:repeat;
+  background-size:260px 260px;opacity:.05;
+}
+body::after{
+  background-image:url("../images/mandala-line.svg");background-size:920px 920px;
+  background-position:right -460px center;opacity:.11;
+}
+body.page-home::after{background-position:left -470px center}
+body.page-research::after{background-position:left -470px bottom -470px}
+body.page-contact::after{background-position:right -420px center}
+body.page-beyond::after{
+  background-image:url("../images/mandala-ornate-blue.svg"),url("../images/mandala-ornate-green.svg");
+  background-size:680px 680px,760px 760px;
+  background-position:right -230px top -150px,left -280px bottom -260px;
   opacity:.08;
 }
 
 /* ---------- Justified body text ---------- */
-main p,main li,main dd{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+main p,main li,main dd{text-align:justify;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:10 4 4}
+main h1,main h2,main h3,main .kicker{text-align:left;-webkit-hyphens:manual;hyphens:manual}
+.prose .kicker{color:var(--accent)}
 
 /* ---------- Beyond the Lab: compact grid ---------- */
 .mini-grid{
@@ -317,13 +336,29 @@ main{overflow-x:clip}
 }
 .sci-art-head{width:380px;right:-90px;top:-40px}
 .sci-art-kinase{width:300px;right:-50px;top:-30px}
-.sci-art-umap{width:440px;right:-60px;top:-30px;opacity:calc(var(--art-opacity) * 1.5)}
+
+/* ---------- Let's get in touch ---------- */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.contact-card{
+  display:flex;flex-direction:column;gap:5px;padding:24px 24px 22px;
+  border:1px solid var(--rule);border-radius:6px;background:rgba(252,250,246,.85);
+  text-decoration:none;color:inherit;transition:border-color .16s,transform .16s;
+}
+a.contact-card:hover{border-color:var(--accent);transform:translateY(-2px);color:inherit}
+.contact-card svg{
+  width:26px;height:26px;margin-bottom:8px;fill:none;stroke:var(--accent);
+  stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;
+}
+.contact-label{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.contact-value{font-family:var(--serif);font-size:1.1rem;color:var(--heading);overflow-wrap:anywhere}
+.kicker-gap{margin-top:56px}
 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .intro-grid{grid-template-columns:1fr;gap:40px;max-width:600px}
   .portrait{max-width:330px}
   .mini-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr 1fr}
   .sci-art{opacity:calc(var(--art-opacity) * .6)}
   .sci-art-head{width:300px;right:-70px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:34px}
@@ -348,13 +383,18 @@ main{overflow-x:clip}
   .intro{padding-top:44px}
   .mandala{height:76px;background-size:240px 240px,240px 240px,auto 150%,auto}
   .mandala-top,.mandala-bottom{background-position:-120px 50%,calc(100% + 120px) 50%,0 50%,0 0}
-  body.page-beyond::before{background-size:380px 380px,420px 420px;background-position:right -150px top -90px,left -170px bottom -150px}
+  body::before{background-size:190px 190px}
+  body::after{background-size:560px 560px;background-position:right -300px center}
+  body.page-home::after{background-position:left -300px center}
+  body.page-research::after{background-position:left -300px bottom -300px}
+  body.page-contact::after{background-position:right -300px center}
+  body.page-beyond::after{background-size:380px 380px,420px 420px;background-position:right -150px top -90px,left -170px bottom -150px}
   .mini-grid{grid-template-columns:1fr}
   .split{grid-template-columns:1fr;gap:20px}
+  .contact-grid{grid-template-columns:1fr}
   .split .tl-item{grid-template-columns:1fr;gap:10px}
   .sci-art-head{width:210px;right:-50px;top:-20px}
   .sci-art-kinase{width:230px;right:-70px}
-  .sci-art-umap{width:260px;right:-70px;top:10px}
   .mini{padding-right:0}
 }
 @media (prefers-reduced-motion:reduce){

@@ -4,7 +4,7 @@ title: Research & CV
 permalink: /research/
 head_art: /assets/images/research/brain.svg
 subtitle: "I work at the join between single-cell genomics and protein structure, using both to ask what goes wrong with kinases in the diseased brain."
-description: "Research and CV of Neha Gupta: single-cell and isoform transcriptomics, kinase structure, LLM agents for kinase biology, genomics pipelines, neurodegeneration — plus experience, education, skills and awards."
+description: "Research and CV of Neha Gupta: single-cell and isoform transcriptomics, kinase structure, LLM agents for kinase biology, genomics pipelines and neurodegeneration, plus publications, experience, education, skills and awards."
 ---
 {% assign cv = site.data.cv %}
 
@@ -31,7 +31,7 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
       </p>
       <p>
         The other half is structural. Once you know a kinase is behaving strangely in a particular cell type,
-        the natural next question is <em>why</em> — and that's a question about the protein itself. Being able
+        the natural next question is <em>why</em>, and that's a question about the protein itself. Being able
         to move between the transcript and the structure is the part of this work I find most satisfying.
       </p>
     </div>
@@ -90,8 +90,8 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
         </div>
         <div class="entry-body">
           <p>
-            Analysed single-cell and single-nucleus RNA-seq from TIM-3 (<em>Havcr2</em>)-deficient 5×FAD mice —
-            preprocessing, QC, integration, clustering, differential expression and annotation — helping define a
+            Analysed single-cell and single-nucleus RNA-seq from TIM-3 (<em>Havcr2</em>)-deficient 5×FAD mice
+            (preprocessing, QC, integration, clustering, differential expression and annotation), helping define a
             microglial subpopulation with increased pro-phagocytic and reduced pro-inflammatory gene expression
             (<em>Nature</em>, 2025). I also supported a multi-omics study of the lipid kinase PI5P4Kγ, integrating
             transcriptomic and chromatin data.
@@ -130,11 +130,41 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
         </div>
       </div>
     </div>
-    <p style="margin-top:28px"><a class="text-link" href="{{ '/publications/' | relative_url }}">Publications &amp; presentations →</a></p>
   </div>
 </section>
 
-<section class="section section-tint" id="experience">
+<section class="section section-tint" id="publications">
+  <div class="wrap">
+    <p class="kicker">Publications</p>
+    <ul class="pub-list">
+      {% for pub in cv.publications %}
+      <li class="pub">
+        <p class="pub-venue">{{ pub.venue }} · {{ pub.year }}{% if pub.details %} · {{ pub.details }}{% endif %}</p>
+        <h3>{{ pub.title }}</h3>
+        <p class="authors">{{ pub.authors | replace: 'Gupta N', '<span class="me">Gupta N</span>' }}</p>
+        {% if pub.links %}
+        <div class="pub-links">
+          {% for l in pub.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p class="kicker kicker-gap">Presentations</p>
+    <ul class="timeline roles">
+      {% for a in cv.presentations %}
+      <li class="tl-item">
+        <div class="tl-when">{{ a.year }}</div>
+        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="margin-top:28px"><a class="text-link" href="{{ site.social.scholar }}">Full list on Google Scholar →</a></p>
+  </div>
+</section>
+
+<section class="section" id="experience">
   <div class="wrap">
     <p class="kicker">Experience</p>
     <ul class="timeline roles">
@@ -151,9 +181,8 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
   </div>
 </section>
 
-<section class="section" id="education">
-  <div class="wrap has-art">
-    <img class="sci-art sci-art-umap" src="{{ '/assets/images/research/umap.svg' | relative_url }}" alt="" aria-hidden="true">
+<section class="section section-tint" id="education">
+  <div class="wrap">
     <p class="kicker">Education</p>
     <ul class="timeline roles">
       {% for e in cv.education %}
@@ -169,7 +198,7 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
   </div>
 </section>
 
-<section class="section section-tint" id="skills">
+<section class="section" id="skills">
   <div class="wrap">
     <p class="kicker">Skills</p>
     <dl class="skills">
@@ -183,7 +212,7 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
   </div>
 </section>
 
-<section class="section" id="honours">
+<section class="section section-tint" id="honours">
   <div class="wrap split">
     <div>
       <p class="kicker">Awards</p>
@@ -207,12 +236,5 @@ description: "Research and CV of Neha Gupta: single-cell and isoform transcripto
         {% endfor %}
       </ul>
     </div>
-  </div>
-  <div class="wrap">
-    <p class="note">
-      Background illustrations: the kinase is drawn from the AlphaFold model of DCLK3
-      (<a href="https://alphafold.ebi.ac.uk/entry/Q9C098">AF-Q9C098-F1</a>, AlphaFold Protein Structure Database,
-      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>); the UMAP is illustrative.
-    </p>
   </div>
 </section>

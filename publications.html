@@ -1,43 +1,17 @@
 ---
-layout: default
-title: Publications
+layout: null
 permalink: /publications/
-subtitle: "Peer-reviewed work across neuroimmunology, kinase biology and computational drug discovery."
-description: "Peer-reviewed publications by Neha Gupta in Nature, the Journal of Biological Chemistry and Molecules."
 ---
-{% assign cv = site.data.cv %}
-
-<section class="section">
-  <div class="wrap">
-    <p class="kicker">Journal articles</p>
-    <ul class="pub-list">
-      {% for pub in cv.publications %}
-      <li class="pub">
-        <p class="pub-venue">{{ pub.venue }} · {{ pub.year }}{% if pub.details %} · {{ pub.details }}{% endif %}</p>
-        <h3>{{ pub.title }}</h3>
-        <p class="authors">{{ pub.authors | replace: 'Gupta N', '<span class="me">Gupta N</span>' }}</p>
-        {% if pub.links %}
-        <div class="pub-links">
-          {% for l in pub.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
-        </div>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section section-tint">
-  <div class="wrap">
-    <p class="kicker">Presentations</p>
-    <ul class="timeline roles">
-      {% for a in cv.presentations %}
-      <li class="tl-item">
-        <div class="tl-when">{{ a.year }}</div>
-        <div class="tl-body"><h3>{{ a.name }}</h3>{% if a.from %}<p class="tl-where">{{ a.from }}</p>{% endif %}</div>
-      </li>
-      {% endfor %}
-    </ul>
-    <p style="margin-top:28px"><a class="text-link" href="{{ site.social.scholar }}">Full list on Google Scholar →</a></p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moved · {{ site.title }}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ '/research/' | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/research/#publications' | relative_url }}">
+</head>
+<body>
+<p>Publications now live on the <a href="{{ '/research/#publications' | relative_url }}">Research &amp; CV</a> page.</p>
+</body>
+</html>
