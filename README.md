@@ -13,12 +13,12 @@ free on GitHub Pages.
 | Tab | File |
 | --- | --- |
 | Home | `index.html` |
-| Research & CV (research, publications, presentations, experience, education, skills, awards) | `research.html` |
+| Research & Résumé (research, publications, presentations, experience, education, skills, awards) | `research.html` |
 | Beyond the Lab | `beyond.html` |
 | Let's get in touch | `contact.html` |
 
 `cv.html` and `publications.html` are redirects, so older links to `/cv/` and
-`/publications/` still land in the right place on Research & CV.
+`/publications/` still land in the right place on Research & Résumé.
 
 ## How to change things
 
@@ -45,7 +45,7 @@ free on GitHub Pages.
   layered mandalas in its corners instead. Change the `opacity` values on those two rules
   to make the backgrounds stronger or fainter.
 
-### Science drawings on Research & CV
+### Science drawings on Research & Résumé
 
 The brain and kinase drawings live in `assets/images/research/`. Their strength is
 `--art-opacity` near the top of the CSS.

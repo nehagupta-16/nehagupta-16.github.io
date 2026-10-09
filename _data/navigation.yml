@@ -1,7 +1,7 @@
 main:
   - title: "Home"
     url: /
-  - title: "Research & CV"
+  - title: "Research & Résumé"
     url: /research/
   - title: "Beyond the Lab"
     url: /beyond/

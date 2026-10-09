@@ -28,7 +28,7 @@
   --wrap:1060px;
   --measure:66ch;
 
-  --art-opacity:.15;   /* strength of the science drawings on Research & CV */
+  --art-opacity:.15;   /* strength of the science drawings on Research & Résumé */
 
   --serif:"Fraunces",Georgia,"Times New Roman",serif;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -326,7 +326,7 @@ main h1,main h2,main h3,main .kicker{text-align:left;-webkit-hyphens:manual;hyph
 .split{display:grid;grid-template-columns:1fr 1fr;gap:52px}
 .split .tl-item{grid-template-columns:96px 1fr;gap:20px}
 
-/* ---------- Science line-art (Research & CV) ---------- */
+/* ---------- Science line-art (Research & Résumé) ---------- */
 main{overflow-x:clip}
 @supports not (overflow:clip){main{overflow-x:hidden}}
 .has-art{position:relative;isolation:isolate}
