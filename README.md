@@ -26,7 +26,7 @@ free on GitHub Pages.
 | --- | --- |
 | **Update résumé facts** (education, job titles & dates, skills, publications, awards, presentations, leadership) | `_data/cv.yml` |
 | Edit what I did in each role / research descriptions | `research.html` ("What I work on") |
-| Replace the downloadable résumé | `assets/files/Neha_Gupta_Resume.pdf` (keep the filename) |
+| Replace the downloadable résumé | `assets/files/Neha_Gupta_Resume.pdf` (keep the filename). Download links carry a `?v=` stamp that changes on every rebuild, so visitors always get the newest copy |
 | Change my name, tagline, email, social links | `_config.yml` |
 | Change the homepage photo | replace `assets/images/neha.jpg` (portrait, roughly 4:5) |
 | Add / rename / reorder tabs in the top menu | `_data/navigation.yml` |
